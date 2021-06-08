@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 
+
+
+  <title>Love Calculator</title>
+</head>
+<body>
+<div id="wallpaper">
+</div>
+
+
+<div id="content">
+  <h1 id="title"> Love Calculator</h1>
+  <p id="sub">see what your lovescore is</p>
+
+  <form>
+    Person One
+  <input id="one" type="text">
+  <p id="required1"></p>
+<br>
+  <br>
+  Person Two
+  <input id="two" type="text">
+  <p id="required2"></p>
+  <br>
+  <br>
+<p id="fields"></p>
+  <button id="button" type="button">Submit</button>
+</form></div>
+
+
+<div id="score">
+<h1 id="h1"></h1>
+</div>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+
+
+
+  var personone = document.getElementById("one")
+    var persontwo = document.getElementById("two")
+var button = $("#button")
+
+
+function getNames() {
+  button.click(function() {
+    event.preventDefault();
+
+getNumber();
+    }
+  )}
+getNames()
+
+
+
+function getNumber() {
+
+  var love = Math.random() * 100
+  love = Math.floor(love) + 1
+
+if((personone).value.length === 0) {
+$("#required1").text("*required")
+}
+
+if((persontwo).value.length === 0) {
+  $("#required2").text("*required")
+}
+if((personone && persontwo).value.length === 0) {
+  $("#fields").text("*both fields cannot be empty")
+return;
+}
+  
+
+  if(love > 50 ) {
+    $("#h1").html("Your lovescore is " + love + "%" + "😇")
+  } else if(love < 50 ) {
+    $("#h1").text("Your lovescore is " + love + "%" + "😴")
+  }
+ else {
+  $("#h1").text("Your lovescore is " + love + "%")
+  return;
+
+  }
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
