@@ -1,18 +1,21 @@
 
 #content {
-  margin: auto;
-  width: 60%;
-  border: 5px solid #e95555;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding: 10px;
-  text-align: center;
+  background-color: rgb(243, 172, 202);
 }
 
-/* #wallpaper {
-  background-image: url('./wallpaper.jpg');
-height: 50%;
+
+#wallpaper {
+background-image: url('./white.jpg');
+height: 100%;
 position: fixed;
 width: 100%;
-} */
+background-size: cover;
+}
 
 
 input {
@@ -25,11 +28,13 @@ form {
 }
 
 #title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: monospace;
+  color: rgb(146, 3, 3);
 }
 
 #sub{
   font-family: cursive;
+  color: red;
 }
 
 button{
@@ -67,3 +72,13 @@ transition: all 0.2s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: red;
 }
+
+
+#score {
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  width: 50%;
+  left: 50%;
+  right: 50%;
+  }
