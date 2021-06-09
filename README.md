@@ -14,3 +14,10 @@ Test yourself or someone elses love connection on this app. Simply type two name
 - CSS
 - JQUERY
 - JAVASCRIPT
+
+
+## Things to implement in the future
+- Added CSS to page
+- Alert notifications
+- PWA
+- Animations to HTML components
